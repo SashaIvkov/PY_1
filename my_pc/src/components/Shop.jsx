@@ -7,8 +7,9 @@ import { BasketList } from './BasketList';
 import { Alert } from './Alert';
 import { Preloader } from './Preloader';
 
+
 function Shop() {
-  const [goods, setGoods] = useState([]);
+  const [products, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState(false);
@@ -100,7 +101,7 @@ function Shop() {
   return (
     <main className="container content">
       <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
-      {loading ? <Preloader /> : <GoodsList goods={goods} addToBasket={addToBasket} />}
+      {loading ? <Preloader /> : <GoodsList products={products} addToBasket={addToBasket} />}
       {isBasketShow && (
         <BasketList
           order={order}

@@ -1,5 +1,9 @@
+// GoodsItem.jsx
+
+import React from 'react';
+
 function GoodsItem(props) {
-  const { id, name, description, price, image, addToBasket = Function.prototype } = props;
+  const { id, name, price, description, image, addToBasket } = props;
 
   return (
     <div className="card">
@@ -13,13 +17,7 @@ function GoodsItem(props) {
       <div className="card-action">
         <button
           className="btn blue accent-4"
-          onClick={() =>
-            addToBasket({
-              id,
-              name,
-              price,
-            })
-          }
+          onClick={() => addToBasket({ id, name, price })}
         >
           Придбати
         </button>
