@@ -56,7 +56,7 @@ function BasketList(props) {
       {isOrderFormVisible && (
         <div className="order-form-container">
           <OrderForm />
-          <button onClick={handleCloseOrderForm}>Закрити форму</button>
+          {/* Нет необходимости в отдельной кнопке для закрытия формы */}
         </div>
       )}
     </div>

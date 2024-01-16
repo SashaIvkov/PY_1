@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import './OrderForm.css'; 
 
 const OrderForm = () => {
   const { handleSubmit, control } = useForm();
